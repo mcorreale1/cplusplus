@@ -3,9 +3,10 @@
 class Node 
 {
     public:
-        int val;
-        Node* link;
         Node(int);
         Node(int, Node*);
+        ~Node();
+        Node* link;
+        int val;
 };
 #endif

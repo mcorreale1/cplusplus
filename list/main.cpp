@@ -13,8 +13,10 @@ int main() {
     list->add(103);
     list->add(321);
 
+
+    list->remove(4);
     printf("%d\n", list->head->val);
     printf("%d\n", list->tail->val);
+    printf("%d\n", list->get(3));
 
-    printf("%d\n", list->get(5));
 }

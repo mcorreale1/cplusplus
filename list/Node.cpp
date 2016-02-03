@@ -10,4 +10,8 @@ Node::Node(int value, Node* next) {
     val = value;
     link = next;
 }
-        
+
+Node::~Node() {
+    printf("Node with value %d deleted\n", val);
+}
+

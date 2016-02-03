@@ -43,11 +43,20 @@ int LinkedList::get(int ind) {
 void LinkedList::remove(int ind) {
     if(ind == 0) {
         head = head->link;
-    } else if (ind < size-1) {
-       for (int i = ind; i < 0; i++) {
-
-       }
-
+    } else  {
+        Node* current = head;    
+        for (int i = 1; i < ind; i++) {
+           current = current->link;
+           if(current == nullptr) {
+               printf("Out of range: %d\n",ind);
+               return;
+           }
+        }
+        if(current->link->link != nullptr) {
+            current->link = current->link->link;
+        } else if (current->link == tail) {
+            tail = current;
+        }
     }
 }
 

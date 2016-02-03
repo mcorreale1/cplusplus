@@ -20,4 +20,5 @@ clean: all
 	rm Node.o
 	rm main.o
 	rm LinkedList.o
-
+	rm LinkedList.h.gch
+	rm Node.h.gch
